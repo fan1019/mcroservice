@@ -1,0 +1,33 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: provider
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 0.1
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/info?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: fanminghui5193@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://root:fanminghui@localhost:7001/eureka
+mybatis:
+  mapper-locations: classpath:dao/*Mapper.xml
+  type-aliases-package: com.fmh.springcloud.pojo
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
