@@ -1,0 +1,8 @@
+server:
+  port: 9401
+spring:
+  application:
+    name: oauth2-service
+  redis:
+    host: 192.168.84.129
+    password: 123456

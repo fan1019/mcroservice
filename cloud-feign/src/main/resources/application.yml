@@ -1,0 +1,25 @@
+﻿server:
+  port: 8708
+spring:
+  application:
+    name: feign-service
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://root:fanminghui@localhost:7001/eureka
+feign:
+  hystrix:
+    enabled: true
+logging:
+  level:
+    com.fmh.springcloud.service.PayService: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

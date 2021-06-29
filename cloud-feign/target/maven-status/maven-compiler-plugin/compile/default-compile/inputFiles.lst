@@ -1,0 +1,5 @@
+E:\code\mcroservice\cloud-feign\src\main\java\com\fmh\springcloud\config\FeignConfig.java
+E:\code\mcroservice\cloud-feign\src\main\java\com\fmh\springcloud\FeignServiceApplication.java
+E:\code\mcroservice\cloud-feign\src\main\java\com\fmh\springcloud\service\PayService.java
+E:\code\mcroservice\cloud-feign\src\main\java\com\fmh\springcloud\service\PayFallbackService.java
+E:\code\mcroservice\cloud-feign\src\main\java\com\fmh\springcloud\controller\PayFeignController.java

@@ -1,0 +1,24 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: zuul-proxy
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://root:fanminghui@localhost:7001/eureka
+zuul:
+  routes:
+    provider:
+      path: /providerService/**
+    feign-service:
+      path: /feignService/**
+  prefix: /service
+  add-host-header: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'routes'
